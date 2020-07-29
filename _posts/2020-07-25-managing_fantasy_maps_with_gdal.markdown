@@ -22,7 +22,7 @@ The plan is to reproject our equirectangular map in different ways to reduce dis
 
 For this tutorial, I'll be using a new world map:
 
-![map](/assets/images/map.png)
+![map]({{ 'assets/images/map.png' | relative_url }})
 
 I'll work with the lower left continent for now.
 
@@ -42,7 +42,7 @@ The easiest way to figure out what exactly you want to project to is to use G.Pr
 
 Loading that up into G.Projector and playing with the settings, I end up with a equidistant conic projection that looks like this:
 
-![gprojector](/assets/images/gprojector.png)
+![gprojector]({{ 'assets/images/gprojector.png' | relative_url }})
 
 ## Reprojecting to Equidistant Conic
 
@@ -129,9 +129,9 @@ Band 3 Block=8760x1 Type=Byte, ColorInterp=Blue
 
 Inevitably, you will be editing this equidistant conic map in Photoshop or other photo editing/terrain editing software. Throughout this process, your tif file will lose the georeferencing information, since when you save in these programs, they don't know to retain that metadata. What I would recommend is to, when making edits, save to a new file. For instance, `equidistant_conic_heightmap.tif`. That way, you can go back and reference your original georeferencing data in `equidistant_conic.tif`.
 
-![](/assets/images/eqdc_bw.png)
+![]({{ 'assets/images/eqdc_bw.png' | relative_url }})
 
-![](/assets/images/eqdc_color.png)
+![]({{ 'assets/images/eqdc_color.png' | relative_url }})
 
 Note: This post is not covering heightmap creation, yet. I just pasted a bit of the australia map from the last post. The scale is not even close.
 
@@ -151,8 +151,8 @@ With the georeferencing data added back in, we can reproject back to equirectang
 gdalwarp -t_srs EPSG:4326 -r mode equidistant_conic_heightmap.tif equirectangular_final.tif
 ```
 
-![](/assets/images/eqr_bw.png)
+![]({{ 'assets/images/eqr_bw.png' | relative_url }})
 
-![](/assets/images/eqr_color.png)
+![]({{ 'assets/images/eqr_color.png' | relative_url }})
 
 The plan is to follow a similar process for each continent, then combine each equirectangular map into a single master file. The great thing about this process is that you can do it at as high of a resolution as you want. Fair warning, though, gdalwarp operations can take *a long* time at really high resolutions, especially with a 16-bit image.

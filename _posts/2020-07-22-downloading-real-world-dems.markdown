@@ -38,7 +38,7 @@ Click the ellipses to browse and navigate to the data sets. Select and add each 
 
 At this point, you should have something that looks like:
 
-![QGIS Australia Unmerged](/assets/images/qgis-bin_Aearr2dZk8.png)
+![QGIS Australia Unmerged]({{ 'assets/images/qgis-bin_Aearr2dZk8.png' | relative_url }})
 
 (Hey look, New Zealand is in our map!)
 
@@ -46,7 +46,7 @@ The first problem we need to solve is that each data set tile is not properly le
 
 Run Raster -> Miscellaneous -> Merge. Use the ellipses to select all layers in the project, then click run. It may take a few minutes, but the end result should look like this:
 
-![QGIS Australia merged](/assets/images/qgis-bin_1xexaEkcsn.png)
+![QGIS Australia merged]({{ 'assets/images/qgis-bin_1xexaEkcsn.png' | relative_url }})
 
 OPTIONAL STEP: As an optional step, you can reproject the data before saving and exiting QGIS. The original data, I believe, is in equirectangular format.
 
@@ -64,11 +64,11 @@ It has been pointed out to me that you can export a rendered image from QGIS tha
 
 #### 8-bit
 
-![8-bit dem](/assets/images/8-bit-dem.png)
+![8-bit dem]({{ 'assets/images/8-bit-dem.png' | relative_url }})
 
 #### 16-bit
 
-![16-bit dem](/assets/images/16-bit_dem.png)
+![16-bit dem]({{ 'assets/images/16-bit_dem.png' | relative_url }})
 
 Open a command line prompt where you saved the tif export from QGIS.
 
@@ -127,6 +127,6 @@ gdal_translate -ot UInt16 -scale -61.000 3159.000 0 65535 australia_merged.tif a
 
 Congratulations! You now have a tif that you can open in Photoshop (along with Gimp, or Affinity Photo, I presume). You can repeat this process for other continents. I have North and South America, Eurasia, and Africa also completed using this process to give me lots of resources to pull from when creating custom heightmaps.
 
-![australia in photoshop](/assets/images/photoshop_knC5EntXYg.png)
+![australia in photoshop]({{ 'assets/images/photoshop_knC5EntXYg.png' | relative_url }})
 
 
