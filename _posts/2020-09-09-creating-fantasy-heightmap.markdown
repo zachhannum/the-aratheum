@@ -31,7 +31,7 @@ Before actually adding any data to the heightmap, I'd like to talk about how I h
 
 ![]({{ 'assets/images/photoshop_heightmap_layers.png' | relative_url }})
 
-The top group, labelled *Topography*, contains all of the peices that make up my heightmap. I have applied a mask to it, which is the overall land mask of the continent, slightly blurred (usually only a few pixels). This ensures that I keep my continent shape when placing peices of DEMs. The Gradient Map and Posterize are to aid in creation of the map. The gradient makes it much easier to see the changes in elevation, especially at lower values. You can download my gradients (topography and bathymetry) for Photoshop [here]('{{ 'assets/images/topographic_gradients.grd' | relative_url }}). 
+The top group, labelled *Topography*, contains all of the peices that make up my heightmap. I have applied a mask to it, which is the overall land mask of the continent, slightly blurred (usually only a few pixels). This ensures that I keep my continent shape when placing peices of DEMs. The Gradient Map and Posterize are to aid in creation of the map. The gradient makes it much easier to see the changes in elevation, especially at lower values. You can download my gradients (topography and bathymetry) for Photoshop [here]({{ 'assets/images/topographic_gradients.grd' | relative_url }}). 
 
 Below that is a layer called adjustments. This layer is one way I modify the underlying data. By adding either small amounts of black and white to the adjustments layer, usually done at 5-20% opacity, I can modify the resulting elevation. I use this layer a lot to lower the elevation along the coastlines by adding layers of black. 
 
@@ -96,8 +96,6 @@ Here is my current progress so far on this continent:
 Once I've finished adding everything, the last stage of the heightmap process will be filling any basins I may have missed, and adding on some terrain to parts of the coastline that might look unnatural.
 
 Thanks for reading!
-
-### 
 
 
 
