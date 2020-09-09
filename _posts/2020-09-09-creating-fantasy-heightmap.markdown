@@ -17,11 +17,11 @@ The first thing you'll want to do is scale the continent to match the source DEM
 
 I know, from looking at Google Earth, that the alps are roughly ~900 km long (in a straight line). In gplates, I'll measure a line roughly that long between two points, like so:
 
-![valmere continent gplates]('{{ 'assets/images/valmere_gplates_scale.png' | relative_url }})
+![valmere continent gplates]({{ 'assets/images/valmere_gplates_scale.png' | relative_url }})
 
 In Photoshop, I'll cut the Alps from my eurasia source DEM and paste it into my heightmap, lining it up with the reference points I layed out in gplates. Remember, this is a rough estimate. I'm not trying to *perfectly* scale this. Within a few hundred km's should be good enough. Change the resolution of your base heightmap until the Alps are roughly the same length as the distance you measured in gplates or similar:
 
-![valmere alps overlay]('{{ 'assets/images/alps_overlay.png' | relative_url }})
+![valmere alps overlay]({{ 'assets/images/alps_overlay.png' | relative_url }})
 
 For my continent, it ends up being 14551 x 14550 pixels.
 
@@ -29,7 +29,7 @@ For my continent, it ends up being 14551 x 14550 pixels.
 
 Before actually adding any data to the heightmap, I'd like to talk about how I have my layers set up in Photoshop to help aid in building the heightmap:
 
-![]('{{ 'assets/images/photoshop_heightmap_layers.png' | relative_url }})
+![]({{ 'assets/images/photoshop_heightmap_layers.png' | relative_url }})
 
 The top group, labelled *Topography*, contains all of the peices that make up my heightmap. I have applied a mask to it, which is the overall land mask of the continent, slightly blurred (usually only a few pixels). This ensures that I keep my continent shape when placing peices of DEMs. The Gradient Map and Posterize are to aid in creation of the map. The gradient makes it much easier to see the changes in elevation, especially at lower values. You can download my gradients (topography and bathymetry) for Photoshop [here]('{{ 'assets/images/topographic_gradients.grd' | relative_url }}). 
 
@@ -47,17 +47,17 @@ The only thing left to do at this point is to start cutting and pasting! This is
 
 One of the first things you'll want to do is adjust for coastlines. Take this bit that I posted into my map:
 
-![]('{{ 'assets/images/valmere_heightmap_1.png' | relative_url }})
+![]({{ 'assets/images/valmere_heightmap_1.png' | relative_url }})
 
 Notice that much of the coastline is rather high in elevation, all the way up to the ocean. This obviously shouldn't happen in real life very often unless you have sheer cliffs. In order to fix this, I apply some black, usually at 15% opacity or so, to the adjustments layer, until my coastlines look a little more natural:
 
-![]('{{ 'assets/images/valmere_heightmap_2.png' | relative_url }})
+![]({{ 'assets/images/valmere_heightmap_2.png' | relative_url }})
 
 ### Merging bits together
 
 In order to make things look seamless, you'll want to "meld" all of your DEM bits together, creating one seamless heightmap. Take, for instance, this bit of data I've just pasted in to extend a coastal mountain range:
 
-![]('{{ 'assets/images/valmere_heightmap_3.png' | relative_url }})
+![]({{ 'assets/images/valmere_heightmap_3.png' | relative_url }})
 
 Note that the way I have arranged the new data, it overlaps with the existing data a bit. This will be important for blending.
 
@@ -65,13 +65,13 @@ I've already flipped and rotated it so that it is roughly in the position that I
 
 Add a levels adjustment, clipped to the new layer, and adjust them so that the height values roughly match the surrounding data:
 
-![]('{{ 'assets/images/levels.png' | relative_url }})
+![]({{ 'assets/images/levels.png' | relative_url }})
 
-![]('{{ 'assets/images/valmere_heightmap_4.png' | relative_url }})
+![]({{ 'assets/images/valmere_heightmap_4.png' | relative_url }})
 
 Next, add a layer mask to the new data. Using a low opacity black, very gradually mask the edges of the data to blend it in with the existing terrain:
 
-![]('{{ 'assets/images/valmere_heightmap_5.png' | relative_url }})
+![]({{ 'assets/images/valmere_heightmap_5.png' | relative_url }})
 
 ### General Guidance
 
@@ -91,7 +91,7 @@ You can also repeat this same process for bathymetric data to create a heightmap
 
 Here is my current progress so far on this continent:
 
-![]('{{ 'assets/images/valmere_heightmap_6.png' | relative_url }})
+![]({{ 'assets/images/valmere_heightmap_6.png' | relative_url }})
 
 Once I've finished adding everything, the last stage of the heightmap process will be filling any basins I may have missed, and adding on some terrain to parts of the coastline that might look unnatural.
 
